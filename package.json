@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/sidp0/Campus-Pins#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.8",
     "nodemon": "^1.11.0"
   }
 }
