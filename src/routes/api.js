@@ -18,13 +18,15 @@ module.exports = (function() {
         // API route to send POST with JSON data of campus events.
         api.post('/events', function(req, res) {
 
+            console.log("connection established");
+
             // Save POST data to events collection in the databse,
             // this should theoretically represent 1 days worth of
             // events.
             db.collection('events').save(req.body, function(error, result) {
                 if(error) res.send(error);
-                console.log("Event saved");
-                res.send("Event saved to database");
+                console.log(req.body);
+                //res.send("Event saved to database");
             })
 
         });

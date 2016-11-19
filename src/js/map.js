@@ -15,7 +15,7 @@ function initMap() {
             minZoom: 15,
             mapTypeControl: false,
             streetViewControl: false,
-            zoomControl: false,
+            zoomControl: true,
             backGroundColor: 'white',
         });
 
