@@ -2,8 +2,9 @@
   "name": "campus-pins",
   "version": "1.0.0",
   "description": "Quickly find out what's happening on Campus.",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
+    "start": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/sidp0/Campus-Pins#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
   }
 }
