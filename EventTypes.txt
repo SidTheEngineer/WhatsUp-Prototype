@@ -1,0 +1,17 @@
+Event Types
+Academic
+Arts Exhibit
+Career/Jobs
+Concert Performance
+Entertainment Health
+Holiday
+Meeting
+Open Forum
+Recreation & Exercise
+Service/Volunteer
+Social Event
+Speakers/Lecture/Seminar
+Sports
+Tour/Open House/Information Session
+Uncategorized/Other
+Workshop/Conference
