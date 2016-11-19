@@ -3,26 +3,41 @@
 <html lang="en" style="overflow-y: scroll">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<title>Campus Pins</title>
 
 	<!-- CSS  -->
+	<!--Import Google Icon Font-->
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<!--Import materialize.css-->
   	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
 <body>
-	<nav>
+	<header>
+		<nav>
 	    <div class="nav-wrapper">
-	      <form>
-	        <div class="input-field">
-	          <input id="search" type="search" required>
-	          <label for="search"><i class="material-icons">search</i></label>
-	          <i class="material-icons">close</i>
-	        </div>
-	      </form>
+	      <a href="#" class="brand-logo">Campus Pins</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="sass.html">Sass</a></li>
+	        <li><a href="badges.html">Components</a></li>
+	        <li><a href="collapsible.html">JavaScript</a></li>
+	      </ul>
 	    </div>
-	  </nav>
+
+	    <ul id="slide-out" class="side-nav">
+	      <li><a href="#!">First Sidebar Link</a></li>
+	      <li><a href="#!">Second Sidebar Link</a></li>
+	    </ul>
+	    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+	</header>
+
+	<!--  Scripts-->
+	<!--Import jQuery before materialize.js-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
 </body>
 </html>
