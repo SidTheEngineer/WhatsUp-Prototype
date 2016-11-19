@@ -1,7 +1,30 @@
+nav ul a,
 nav .brand-logo {
-  margin-left: 20px;
+  color: #444;
 }
+
+.button-collapse {
+  color: #26a69a;
+}
+
 nav form {
   margin-left: 180px;
   width: 300px;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+.map-container {
+	height: 100%;
+	width: 100%;
+}
+
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
