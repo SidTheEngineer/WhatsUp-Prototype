@@ -4204,16 +4204,6 @@ nav .input-field label.active {
   }
 }
 
-header, main, footer {
-      padding-right: 300px;
-    }
-
-    @media only screen and (max-width : 992px) {
-      header, main, footer {
-        padding-left: 0;
-      }
-    }
-
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
