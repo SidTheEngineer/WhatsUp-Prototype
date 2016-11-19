@@ -7,7 +7,7 @@ module.exports = (function() {
 
     // Index/home route.
     router.get('/', function(req, res) {
-        res.sendFile('campus-pins.html', { root: __dirname + '/../' });
+        res.sendFile('test.html', { root: __dirname + '/../' });
     });
 
     return router;

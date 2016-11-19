@@ -8,7 +8,12 @@ var PORT = 3000;
 
 // Allows us to grab the JSON POST data in req.body.
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Static files.
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/images', express.static(__dirname + '/images'));
  
 // Routes.
 app.use('/', router);
