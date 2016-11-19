@@ -23,6 +23,7 @@ module.exports = (function() {
             // events.
             db.collection('events').save(req.body, function(error, result) {
                 if(error) res.send(error);
+                console.log("Event saved");
                 res.send("Event saved to database");
             })
 
