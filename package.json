@@ -1,0 +1,22 @@
+{
+  "name": "campus-pins",
+  "version": "1.0.0",
+  "description": "Quickly find out what's happening on Campus.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidp0/Campus-Pins.git"
+  },
+  "author": "Hack Knight 2016 Group",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sidp0/Campus-Pins/issues"
+  },
+  "homepage": "https://github.com/sidp0/Campus-Pins#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
