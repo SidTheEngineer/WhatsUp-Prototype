@@ -2,7 +2,6 @@ var map = null;
 
 function initMap() {
 
-    // Location constants.
     var STUDENT_UNION = {
         lat: 28.601660,
         lng: -81.200788
@@ -10,15 +9,15 @@ function initMap() {
 
     // Create a map object and specify the DOM element for display.
         map = new google.maps.Map(document.getElementById('map'), {
-        center: STUDENT_UNION,
-        zoom: 15,
-        maxZoom: 18,
-        minZoom: 15,
-        mapTypeControl: false,
-        streetViewControl: false,
-        zoomControl: false,
-        backGroundColor: 'white',
-    });
+            center: STUDENT_UNION,
+            zoom: 15,
+            maxZoom: 18,
+            minZoom: 15,
+            mapTypeControl: false,
+            streetViewControl: false,
+            zoomControl: false,
+            backGroundColor: 'white',
+        });
 
     // Find a way to import this...
     var geoJson = {
@@ -922,8 +921,28 @@ function initMap() {
         ]
     }
 
+    /*for(var i=0; i<geoJson.features.length; i++) {
+        console.log(geoJson.features[i].geometry.coordinates[0]);
+
+        var latLng = {
+            lat: geoJson.features[i].geometry.coordinates[0],
+            lng: geoJson.features[i].geometry.coordinates[1]
+        }
+
+        /*var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: 'test',
+            visible: true
+        });
+
+        console.log(marker);
+    }*/
+    // Load preset markers onto the map.
     map.data.addGeoJson(geoJson);
 
+    // On the center of the map changing, check if the user
+    // is still in bounds.
     google.maps.event.addListener(map,'center_changed',function() { checkBounds(); });
 }
 
@@ -941,22 +960,24 @@ function checkBounds() {
 
     var allowedBounds = new google.maps.LatLngBounds(SOUTHWEST_BOUND, NORTHEAST_BOUND);
 
+    // If the center of the map is no longer on the screen.
     if(! allowedBounds.contains(map.getCenter())) {
-      var C = map.getCenter();
-      var X = C.lng();
-      var Y = C.lat();
+        var mapCenter = map.getCenter();
+        var X = mapCenter.lng();
+        var Y = mapCenter.lat();
 
-      var AmaxX = allowedBounds.getNorthEast().lng();
-      var AmaxY = allowedBounds.getNorthEast().lat();
-      var AminX = allowedBounds.getSouthWest().lng();
-      var AminY = allowedBounds.getSouthWest().lat();
+        var AmaxX = allowedBounds.getNorthEast().lng();
+        var AmaxY = allowedBounds.getNorthEast().lat();
+        var AminX = allowedBounds.getSouthWest().lng();
+        var AminY = allowedBounds.getSouthWest().lat();
 
-      if (X < AminX) {X = AminX;}
-      if (X > AmaxX) {X = AmaxX;}
-      if (Y < AminY) {Y = AminY;}
-      if (Y > AmaxY) {Y = AmaxY;}
+        if (X < AminX) {X = AminX;}
+        if (X > AmaxX) {X = AmaxX;}
+        if (Y < AminY) {Y = AminY;}
+        if (Y > AmaxY) {Y = AmaxY;}
 
-      map.setCenter(new google.maps.LatLng(Y,X));
+        // Snap the map back to the allowed bounds.
+        map.setCenter(new google.maps.LatLng(Y,X));
     }
 }
 
